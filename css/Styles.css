@@ -448,3 +448,220 @@ header .ButtonSection .Unirse {
     width: 70%;
     font-size: 1.3rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+.Preguntas {
+    height: 100%;
+    background-color: #fc0;
+}
+
+
+.Preguntas .Cuestions {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: center;
+}
+
+
+.Preguntas .left {
+    width: 55%;
+    margin-right: 3rem;
+}
+
+.Preguntas  .Cuestions h3 {
+    font-size: 2.4rem;
+    /* width: 30%; */
+}
+
+
+
+.Preguntas .Cuestions p {
+    font-size: 1.1rem;
+    /* width: 30%; */
+}
+
+
+.Preguntas .Rigth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Preguntas .Rigth .Card {
+    padding: 1rem;
+}
+
+.Preguntas .Rigth img {
+    width: 60px;
+    height: 60px;
+}
+
+.Preguntas .Rigth h3 {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.Preguntas .Rigth p {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.Dudas {
+    width: 60%;
+    background: #f2f2f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+    height: 100%;
+}
+
+.Dudas h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.Pregunta {
+    margin-bottom: 20px;
+}
+
+.Pregunta h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.Pregunta p {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.Bar {
+    height: 3px;
+    background-color: black;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.contact-button {
+    background-color: #0078FF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-button:hover {
+    background-color: #005bb5;
+}
+
+
+
+
+
+
+
+footer {
+    background-color: #333; /* Gris oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0;
+    margin-top: 5rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 3;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.footer-logo {
+    max-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold; /* Títulos en negrita */
+}
+
+.footer-column p {
+    font-size: 1rem;
+    margin: 5px 0;
+    font-style: italic; /* Texto en cursiva */
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.subscription-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.subscription-form button {
+    background-color: #f2f2f7;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.subscription-form button:hover {
+    background-color: #005bb5;
+}
