@@ -28,6 +28,10 @@ main{
 
 
 
+/* ...existing code... */
+
+/* ...existing code... */
+
 header {
     display: flex;
     flex-direction: row;
@@ -48,7 +52,6 @@ header nav {
     justify-content: space-between;
     align-items: center;
 }
-
 
 header nav a {
     text-decoration: none;
@@ -73,6 +76,88 @@ header .ButtonSection .Unirse {
     cursor: pointer;
 }
 
+/* Estilos para pantallas medianas */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    header .logo {
+        height: 290px;
+    }
+
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    header .ButtonSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .ButtonSection .Buscar,
+    header .ButtonSection .Unirse {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    header .logo {
+        height: 150px;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    header .ButtonSection .Buscar,
+    header .ButtonSection .Unirse {
+        font-size: 1rem;
+        padding: 8px;
+        display: none; /* Ocultar los botones de búsqueda y unirse */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    header {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
+
+    header .logo {
+        height: 100px;
+    }
+
+    header nav a {
+        display: none; /* Ocultar los enlaces de navegación */
+    }
+
+    header .ButtonSection .Buscar,
+    header .ButtonSection .Unirse {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
+
+/* ...existing code... */
 
 
 
@@ -84,14 +169,11 @@ header .ButtonSection .Unirse {
 
 
 
-
-
+/* Estilos para pantallas grandes */
 .heroSection {
     background-color: var(--MiGris);
     height: 100%;
 }
-
-
 
 .heroSection .ContentArea {
     width: 85%;
@@ -105,35 +187,24 @@ header .ButtonSection .Unirse {
     align-content: flex-start;
 }
 
-.heroSection .ContentArea .left p{
+.heroSection .ContentArea .left p {
     width: 40vw;
     font-size: 2.9rem;
     color: #ffffff;
 }
 
-
-.heroSection .ContentArea .right p{
+.heroSection .ContentArea .right p {
     font-size: 1.4rem;
     color: #ffffff;
 }
 
-
-
-
-.heroSection .ContentArea .Ver {
-    background-color: #ffffff;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
+.heroSection .ContentArea .Ver,
 .heroSection .ContentArea .Explorar {
-    background-color: #fc0;
-    border: 1px solid black;
     padding: 10px;
     font-size: 1.1rem;
     cursor: pointer;
+    margin: 0 auto; /* Centrar los botones */
+    display: block; /* Asegurar que los botones sean bloques */
 }
 
 .heroSection .ImgHero {
@@ -142,34 +213,30 @@ header .ButtonSection .Unirse {
     margin-left: auto;
     margin-right: auto;
     border-radius: 1.4rem;
-
 }
 
 .heroSection .ImgHero .imgcontent {
     text-align: center;
     position: relative;
     padding-bottom: 2rem;
-
     display: flex;
     flex-direction: column;
 }
-
 
 .heroSection .ContentArea p {
     color: #fff;
     font-size: 2rem;
 }
 
-
 .heroSection .imgcontent .Mando {
     width: 90%;
     position: absolute;
-    transform: translateY(38%);
-    margin-left: 3rem;
+    bottom: 0; /* Ajustar a la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 99;
-    clip-path: inset(0 0 50% 0); 
+    clip-path: inset(0 0 50% 0);
 }
-
 
 .heroSection .imgcontent::before {
     content: "";
@@ -180,20 +247,86 @@ header .ButtonSection .Unirse {
     height: 96%;
     background: linear-gradient(to bottom, rgba(0, 120, 255, 0.5), rgba(0, 120, 255, 0.5));
     z-index: 2;
-    border-radius: 1.4rem; 
-    pointer-events: none; 
+    border-radius: 1.4rem;
+    pointer-events: none;
 }
-
 
 .heroSection .imgcontent .Fondo {
     width: 100%;
     border-radius: 1.4rem;
 }
 
+/* Estilos para pantallas medianas */
+@media (max-width: 992px) {
+    .heroSection .ContentArea {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .heroSection .ContentArea .left p,
+    .heroSection .ContentArea .right p {
+        width: 100%;
+        text-align: center;
+    }
 
+    .heroSection .ContentArea .left p {
+        font-size: 2.5rem;
+    }
 
+    .heroSection .ContentArea .right p {
+        font-size: 1.2rem;
+    }
+}
 
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .heroSection .ContentArea .left p {
+        font-size: 2rem;
+    }
+
+    .heroSection .ContentArea .right p {
+        font-size: 1rem;
+    }
+
+    .heroSection .ContentArea .Ver,
+    .heroSection .ContentArea .Explorar {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .heroSection .imgcontent .Mando {
+        width: 80%;
+        bottom: 0; /* Ajustar a la parte inferior */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .heroSection .ContentArea .left p {
+        font-size: 1.5rem;
+    }
+
+    .heroSection .ContentArea .right p {
+        font-size: 0.9rem;
+    }
+
+    .heroSection .ContentArea .Ver,
+    .heroSection .ContentArea .Explorar {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    .heroSection .imgcontent .Mando {
+        width: 70%;
+        bottom: 0; /* Ajustar a la parte inferior */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ...existing code... */
 
 
 
@@ -356,10 +489,11 @@ header .ButtonSection .Unirse {
 
 
 
+/* ...existing code... */
+
 .PromoUno {
     height: 100%;
     background-color: #5f5f5f;
-
 }
 
 .PromoUno .Content {
@@ -368,32 +502,89 @@ header .ButtonSection .Unirse {
     padding-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
-
-
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
-
 
 .PromoUno .left .TextoUno {
     font-size: 2.7rem;
     color: #fff;
 }
 
-
 .PromoUno .left .TextoDos {
     font-size: 1.1rem;
     color: #fff;
 }
 
-
-
 .PromoUno .rigth img {
     height: 630px;
     margin-left: 1.5rem;
 }
+
+/* Estilos para pantallas medianas */
+@media (max-width: 992px) {
+    .PromoUno .Content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PromoUno .rigth img {
+        height: 500px;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .PromoUno .left .TextoUno {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .PromoUno .left .TextoDos {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .PromoUno .rigth img {
+        height: 400px;
+    }
+
+    .PromoUno .left .TextoUno {
+        font-size: 1.8rem;
+    }
+
+    .PromoUno .left .TextoDos {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .PromoUno .rigth img {
+        height: 300px;
+    }
+
+    .PromoUno .left .TextoUno {
+        font-size: 1.5rem;
+    }
+
+    .PromoUno .left .TextoDos {
+        font-size: 0.8rem;
+    }
+}
+
+/* ...existing code... */
+
+
+
+
+
+
+
+
 
 
 
@@ -423,6 +614,81 @@ header .ButtonSection .Unirse {
     font-size: 1.3rem;
 }
 
+
+
+/* Estilos para pantallas medianas */
+@media (max-width: 992px) {
+    .PromoDos {
+        height: 60vh;
+    }
+    
+    .PromoDos .left {
+        margin-left: 2rem;
+    }
+
+    .PromoDos .left h3 {
+        font-size: 2.5rem;
+    }
+
+    .PromoDos .left p {
+        width: 70%;
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .PromoDos {
+        height: 50vh;
+    }
+
+    .PromoDos .left {
+        margin-left: 1rem;
+    }
+
+    .PromoDos .left h3 {
+        font-size: 2rem;
+        color: #000000;
+    }
+
+    .PromoDos .left p {
+        width: 80%;
+        font-size: 1.1rem;
+        color: #000000;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .PromoDos {
+        height: 40vh;
+    }
+
+    .PromoDos .left {
+        margin-left: 0.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .PromoDos .left h3 {
+        font-size: 1.5rem;
+    }
+
+    .PromoDos .left p {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* ...existing code... */
+
 .PromoTres {
     height: 80vh;
     background-image: url('../assets/Banner\ Xbox.png');
@@ -437,7 +703,7 @@ header .ButtonSection .Unirse {
     justify-content: center;
     flex-direction: column;
     margin-left: 3rem;
-    color: #fff;
+    color: #000000;
 }
 
 .PromoTres .left h3 {
@@ -449,6 +715,69 @@ header .ButtonSection .Unirse {
     font-size: 1.3rem;
 }
 
+/* Estilos para pantallas medianas */
+@media (max-width: 992px) {
+    .PromoTres {
+        height: 70vh;
+    }
+
+    .PromoTres .left {
+        margin-left: 2rem;
+    }
+
+    .PromoTres .left h3 {
+        font-size: 2.5rem;
+    }
+
+    .PromoTres .left p {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .PromoTres {
+        height: 60vh;
+    }
+
+    .PromoTres .left {
+        margin-left: 1rem;
+    }
+
+    .PromoTres .left h3 {
+        font-size: 2rem;
+    }
+
+    .PromoTres .left p {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .PromoTres {
+        height: 50vh;
+    }
+
+    .PromoTres .left {
+        margin-left: 0.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .PromoTres .left h3 {
+        font-size: 1.5rem;
+    }
+
+    .PromoTres .left p {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+/* ...existing code... */
 
 
 
@@ -457,13 +786,12 @@ header .ButtonSection .Unirse {
 
 
 
-
+/* ...existing code... */
 
 .Preguntas {
     height: 100%;
     background-color: #fc0;
 }
-
 
 .Preguntas .Cuestions {
     width: 90%;
@@ -478,24 +806,18 @@ header .ButtonSection .Unirse {
     align-items: center;
 }
 
-
 .Preguntas .left {
     width: 55%;
     margin-right: 3rem;
 }
 
-.Preguntas  .Cuestions h3 {
+.Preguntas .Cuestions h3 {
     font-size: 2.4rem;
-    /* width: 30%; */
 }
-
-
 
 .Preguntas .Cuestions p {
     font-size: 1.1rem;
-    /* width: 30%; */
 }
-
 
 .Preguntas .Rigth {
     display: flex;
@@ -522,7 +844,87 @@ header .ButtonSection .Unirse {
     margin-left: 1rem;
 }
 
+/* Estilos para pantallas medianas */
+@media (max-width: 992px) {
+    .Preguntas .Cuestions {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .Preguntas .left {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .Preguntas .Rigth {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Preguntas .Rigth .Card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .Preguntas .Cuestions {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .Preguntas .left {
+        width: 100%;
+    }
+
+    .Preguntas .Cuestions h3 {
+        font-size: 2rem;
+    }
+
+    .Preguntas .Cuestions p {
+        font-size: 1rem;
+    }
+
+    .Preguntas .Rigth h3 {
+        font-size: 1.2rem;
+    }
+
+    .Preguntas .Rigth p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .Preguntas .Cuestions {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .Preguntas .Cuestions h3 {
+        font-size: 1.8rem;
+    }
+
+    .Preguntas .Cuestions p {
+        font-size: 0.9rem;
+    }
+
+    .Preguntas .Rigth img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .Preguntas .Rigth h3 {
+        font-size: 1rem;
+    }
+
+    .Preguntas .Rigth p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ...existing code... */
 
 
 
