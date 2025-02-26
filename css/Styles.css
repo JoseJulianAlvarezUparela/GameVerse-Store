@@ -168,7 +168,6 @@ header .ButtonSection .Unirse {
 /* ***************************************** */
 
 
-
 /* Estilos para pantallas grandes */
 .heroSection {
     background-color: var(--MiGris);
@@ -325,8 +324,6 @@ header .ButtonSection .Unirse {
         transform: translateX(-50%);
     }
 }
-
-/* ...existing code... */
 
 
 
